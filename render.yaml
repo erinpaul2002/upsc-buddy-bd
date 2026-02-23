@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: upsc-buddy-bd-docker
+    runtime: docker
+    plan: free
+    rootDir: upsc-buddy-bd
+    healthCheckPath: /health
+    envVars:
+      - key: CORS_ORIGINS
+        value: "*"
